@@ -1,0 +1,9 @@
+<h2>RxJS Observable example</h2>
+<div>
+    <button (click)="callObservable()">call observable</button>
+    <button (click)="ms.clear()">clear message</button>    
+</div>
+
+<ul>
+    <li *ngFor='let message of ms.messages'> {{message}} </li>
+</ul>

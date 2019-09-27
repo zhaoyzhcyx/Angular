@@ -1,0 +1,18 @@
+<h2>Angular Form examples</h2>
+<div>single element form controled by [formControl] Class : 
+    <input type="text" [formControl]="name">
+    <button (click)="addValue()">Add</button>
+</div> 
+
+<div>DOM element controled by data binding interpolation : 
+    <input id="databinding" type="text" value={{dataB}} >
+    <button (click)="databindingClick()">databinding</button>
+</div>
+
+<div>DOM element controled by @view with tamplate variable: 
+    <input id="tView" type="text" #txtView1>
+    <button (click)="txtViewClick()">viewcontroled</button>
+</div>
+
+<div attr.id={{div1ID}}>test div attribute id</div>
+

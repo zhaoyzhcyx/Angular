@@ -1,0 +1,5 @@
+<h2>uploadfile example</h2>
+    <label for="selectedfile">select file: </label>
+    <input type="file" id="selectedfile" #selectedfile
+        (click)="message=''"
+        (change)="uploadFile(selectedfile)">
