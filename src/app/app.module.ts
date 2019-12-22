@@ -10,6 +10,8 @@ import { ObservableComponent} from './observable/observable.component';
 import { UploadFileComponent } from './uploadfile/uploadfile.component';
 import { NgZoneComponent } from './ngzone/ngzone.component';
 import { FormComponent } from './form/form.component';
+import { LazyLoadComponent } from './lazyload/lazyload.component'
+import { OrderComponent } from './lazyload/order/order.component'
 
 import {MessageService } from './services/message.service';
 
@@ -21,7 +23,9 @@ import {MessageService } from './services/message.service';
     ObservableComponent,
     UploadFileComponent,
     NgZoneComponent,
-    FormComponent
+    FormComponent,
+    LazyLoadComponent,
+    OrderComponent
   ],
   imports: [
     FormsModule,

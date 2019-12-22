@@ -1,9 +1,32 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a href="#" class="navbar-brand">Angular Examples</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav" id="navMenu">
+          <a routerLink="/hooks" class="nav-item nav-link" id="hooks" onclick="activeNavMenu('hooks')">Hooks</a>
+          <a routerLink="/lazyload" class="nav-item nav-link" id="lazyload" onclick="activeNavMenu('lazyload')">LazyLoad</a>
+          <a routerLink="/observable" class="nav-item nav-link" id="observable" onclick="activeNavMenu('observable')">Observable</a>
+          <a routerLink="/uploadfile" class="nav-item nav-link" id="uploadfile" onclick="activeNavMenu('uploadfile')">UploadFile</a>
+          <a routerLink="/ngzone" class="nav-item nav-link" id="ngzone" onclick="activeNavMenu('ngzone')">ngZone</a>
+          <a routerLink="/form" class="nav-item nav-link" id="form" onclick="activeNavMenu('form')">Form</a>
+      </div>
+      <form class="form-inline ml-auto">
+          <input type="text" class="form-control mr-sm-2" placeholder="Search">
+          <button type="submit" class="btn btn-outline-light">Search</button>
+      </form>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}! 
   </h1>
-  <!--img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" -->
 </div>
 <h2>Here are some test examples for studying: </h2>
 <ul>
@@ -36,7 +59,7 @@
   <li>
     <app-form></app-form>
   </li>
-</ul>
+</ul> -->
 
 
 
