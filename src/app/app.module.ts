@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,11 @@ import { NgZoneComponent } from './ngzone/ngzone.component';
 import { FormComponent } from './form/form.component';
 import { LazyLoadComponent } from './lazyload/lazyload.component'
 import { OrderComponent } from './lazyload/order/order.component'
+import { EventGetComponent } from './event/event-get.component'
+import { EventNewComponent } from './event/event-new.component'
+import { EventEditComponent } from './event/event-edit.component'
 
+import { EventService } from './services/event.service';
 import {MessageService } from './services/message.service';
 
 @NgModule({
@@ -25,16 +30,21 @@ import {MessageService } from './services/message.service';
     NgZoneComponent,
     FormComponent,
     LazyLoadComponent,
-    OrderComponent
+    OrderComponent,
+    EventGetComponent,
+    EventNewComponent,
+    EventEditComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
   providers: [
-    MessageService
+    MessageService,
+    EventService
   ],
   bootstrap: [AppComponent],
 })

@@ -11,3 +11,13 @@ function activeNavMenu(itemID) {
         }
     }    
 }
+
+//used by newevent.pug to auto-set enddate value same with startdate
+function setEndDate() {
+    let startDate = document.getElementById('startdate')
+    let endDate = document.getElementById('enddate')
+
+    if (endDate.value === '') {
+        endDate.value = startDate.value
+    }
+}

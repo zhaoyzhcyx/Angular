@@ -7,6 +7,9 @@ import { HooksComponent } from './hooks/hooks.component';
 import { LazyLoadComponent } from './lazyload/lazyload.component';
 import { ObservableComponent } from './observable/observable.component';
 import { OrderComponent } from './lazyload/order/order.component';
+import { EventGetComponent } from './event/event-get.component';
+import { EventNewComponent} from './event/event-new.component'
+import { EventEditComponent } from './event/event-edit.component'
 
 const routes: Routes = [
   {path: 'hooks', component: HooksComponent},
@@ -16,6 +19,9 @@ const routes: Routes = [
   {path: 'uploadfile', component: UploadFileComponent},
   {path: 'ngzone', component: NgZoneComponent},
   {path: 'form', component: FormComponent},
+  {path: 'events', component: EventGetComponent},
+  {path: 'newevent', component: EventNewComponent},
+  {path: 'edit/:id', component: EventEditComponent},
   {
     path: '',
     redirectTo: '',

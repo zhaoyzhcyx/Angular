@@ -1,0 +1,52 @@
+<form [formGroup]="eventForm" class="container" enctype="application/x-www-form-urlencoded">
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="eventname">Event name</label>
+      <input type="text" class="form-control" id="eventname" name="eventname" formControlName="eventname" #eventname
+        placeholder="Event Name" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="organizer">Organizer</label>
+      <input type="text" class="form-control" id="organizer" name="organizer" formControlName="organizer" #organizer
+        placeholder="Organizer">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-3 mb-3">
+      <label for="startdate">Duration</label>
+      <input type="datetime-local" class="form-control" id="startdate" name="startdate" formControlName="startdate"
+        #startdate placeholder="Start Time" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="enedate"> &nbsp;&nbsp; </label>
+      <input type="datetime-local" class="form-control" id="enddate" name="enddate" formControlName="enddate" #enddate
+        onmousemove="setEndDate()" placeholder="End Time" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="location">Location</label>
+      <input type="text" class="form-control" id="location" name="location" formControlName="location" #location
+        placeholder="location" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="website">Website</label>
+      <input type="text" class="form-control" id="website" name="website" formControlName="website" #website
+        placeholder="Website">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="image">Image</label>
+      <input type="text" class="form-control" id="image" name="image" formControlName="image" #image
+        placeholder="image">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="desc">Description</label>
+      <textarea class="form-control" id="desc" name="desc" formControlName="desc" #desc placeholder="Event Description"
+        rows=5 required></textarea>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit"
+    (click)="addEvent(eventname.value,organizer.value,startdate.value,enddate.value,location.value,website.value,image.value,desc.value)">Submit</button>
+</form>
