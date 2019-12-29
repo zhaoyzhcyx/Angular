@@ -1,69 +1,39 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a href="#" class="navbar-brand">Angular Examples</a>
+  <a routerLink="/" class="navbar-brand">Dever</a>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav" id="navMenu">
-          <a routerLink="/hooks" class="nav-item nav-link" id="hooks" onclick="activeNavMenu('hooks')">Hooks</a>
-          <a routerLink="/lazyload" class="nav-item nav-link" id="lazyload" onclick="activeNavMenu('lazyload')">LazyLoad</a>
-          <a routerLink="/observable" class="nav-item nav-link" id="observable" onclick="activeNavMenu('observable')">Observable</a>
-          <a routerLink="/uploadfile" class="nav-item nav-link" id="uploadfile" onclick="activeNavMenu('uploadfile')">UploadFile</a>
-          <a routerLink="/ngzone" class="nav-item nav-link" id="ngzone" onclick="activeNavMenu('ngzone')">ngZone</a>
-          <a routerLink="/form" class="nav-item nav-link" id="form" onclick="activeNavMenu('form')">Form</a>
-          <a routerLink="/events" class="nav-item nav-link" id="events" onclick="activeNavMenu('events')">Events</a>
-          <a routerLink="/newevent" class="nav-item nav-link" id="newevent" onclick="activeNavMenu('newevent')">New Event</a>
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Examples
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a routerLink="/hooks" class="dropdown-item" id="hooks" onclick="activeNavMenu('hooks')">Hooks</a>
+        <a routerLink="/lazyload" class="dropdown-item" id="lazyload" onclick="activeNavMenu('lazyload')">LazyLoad</a>
+        <a routerLink="/observable" class="dropdown-item" id="observable"
+          onclick="activeNavMenu('observable')">Observable</a>
+        <a routerLink="/uploadfile" class="dropdown-item" id="uploadfile"
+          onclick="activeNavMenu('uploadfile')">UploadFile</a>
+        <a routerLink="/ngzone" class="dropdown-item" id="ngzone" onclick="activeNavMenu('ngzone')">ngZone</a>
+        <a routerLink="/form" class="dropdown-item" id="form" onclick="activeNavMenu('form')">Form</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" routerLink="">Something else here</a>
       </div>
-      <form class="form-inline ml-auto">
-          <input type="text" class="form-control mr-sm-2" placeholder="Search">
-          <button type="submit" class="btn btn-outline-light">Search</button>
-      </form>
+    </div>
+    <a routerLink="/event" class="nav-item nav-link" id="events" onclick="activeNavMenu('events')">Events</a>
+    <a routerLink="/event/create" class="nav-item nav-link" id="newevent" onclick="activeNavMenu('newevent')">New
+      Event</a>
   </div>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <!-- <form class="form-inline align-items-center">
+      <input type="text" class="form-control mr-sm-2" placeholder="Search">
+      <button type="submit" class="btn btn-outline-light">Search</button>
+    </form> -->
+  </div>
+  <app-userset></app-userset>
 </nav>
 
 <router-outlet></router-outlet>
-
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}! 
-  </h1>
-</div>
-<h2>Here are some test examples for studying: </h2>
-<ul>
-  <li>
-    <app-hooks></app-hooks>
-  </li>
-  <li>
-    <h2>router lazy load example:</h2> 
-    <table>
-      <tr>
-        <td> <a routerLink="/lazyload">lazyload</a> </td>
-        <td> <a routerLink="">home</a> </td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td> <router-outlet></router-outlet> </td> 
-      </tr>
-    </table>
-  </li>
-  <li>
-    <app-observable></app-observable>
-  </li>   
-  <li>
-    <app-uploadfile></app-uploadfile>
-  </li>
-  <li>
-    <app-ngzone></app-ngzone>
-  </li>
-  <li>
-    <app-form></app-form>
-  </li>
-</ul> -->
-
-
-
-
-

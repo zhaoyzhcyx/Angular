@@ -31,7 +31,7 @@ export class EventNewComponent {
     addEvent(eventname,organizer,startdate,enddate,location,website,image,desc) {
         this.eventService.addEvent(eventname,organizer,startdate,enddate,location,website,image,desc).subscribe((data) => {
             if (data[0].result == 'ok') {
-                this.router.navigate(['events']);
+                this.router.navigate(['event']);
                 // document.location = "/events"
             }
         })

@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="card col-md-9 mb-3" *ngFor='let event of events'>
     <div class="card-header">
-      <a routerLink="/edit/{{event.name}}"> {{event.name}} </a>
+      <a routerLink="edit/{{event.name}}"> {{event.name}} </a>
     </div>
     <div class="card-body">
       <div class="card-title">
@@ -14,7 +14,7 @@
         {{event.description}}
       </div>
       <div class="card-text" *ngIf="event.img != '' ">
-        <img class="img-fluid" src="assets/img/{{event.img}}" alt="Responsive image">
+        <img class="img-fluid" src="./assets/img/{{event.img}}" alt="Responsive image">
       </div>
     </div>
   </div>

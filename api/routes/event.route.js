@@ -2,6 +2,7 @@ const express = require('express')
 const eventRoutes = express.Router()
 const eventModel = require('../models/reginaitevents.model')
 
+//get all events
 eventRoutes.route('/').get( (req,res) => {
     eventModel.find({}).exec((err, events) => {
         if (err) {
@@ -12,7 +13,16 @@ eventRoutes.route('/').get( (req,res) => {
     })
 })
 
-eventRoutes.route('/add').post( (req,res) => {
+//edit event by id
+eventRoutes.route('/edit/:id').get(function (req, res) {
+    let id = req.params.id;
+    eventModel.find({'name': id}, (err, events) => {
+        res.json(events);
+    })
+  });
+
+// create event
+eventRoutes.route('/create').post( (req,res) => {
     let newEvent = req.body
     
     eventModel.create(newEvent, (err,small) => {
@@ -21,13 +31,7 @@ eventRoutes.route('/add').post( (req,res) => {
     })
 })
 
-eventRoutes.route('/edit/:id').get(function (req, res) {
-    let id = req.params.id;
-    eventModel.find({'name': id}, (err, events) => {
-        res.json(events);
-    })
-  });
-
+//delete event by id
 eventRoutes.route('/delete/:id').get(function (req, res) {
     let id = req.params.id;
     eventModel.deleteOne({'name': id}, (err) => {
@@ -36,6 +40,7 @@ eventRoutes.route('/delete/:id').get(function (req, res) {
     })
 });
 
+//update event by id
 eventRoutes.route('/update/:id').post( (req, res) => {
     let currentEvent = req.body
     let id = req.params.id
@@ -55,7 +60,5 @@ eventRoutes.route('/update/:id').post( (req, res) => {
         else res.status(200).json([{'result': 'ok'}])
     });
 });
-
-  
 
 module.exports = eventRoutes

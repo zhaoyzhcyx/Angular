@@ -1,6 +1,6 @@
 import { Component, Input, DoCheck, OnChanges, OnInit, EventEmitter } from '@angular/core';
 
-import { MessageService } from '../services/message.service';
+import { MessageService } from '../../services/message.service';
 
 @Component ({
     selector: 'app-hooks-child',

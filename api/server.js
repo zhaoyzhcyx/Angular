@@ -5,6 +5,7 @@ const bodyparser = require('body-parser')
 const mongoose = require('mongoose')
 const eventsModel = require('./models/reginaitevents.model')
 const eventRoute = require('./routes/event.route')
+const userRoute = require('./routes/user.route')
 const url = 'mongodb://localhost:27017/public'
 
 require('dotenv').config()
@@ -17,7 +18,8 @@ mongoose.connect(url,{useUnifiedTopology: true, useNewUrlParser: true}).then(
 
 app.use(bodyparser.json())
 app.use(cors());
-app.use('/events', eventRoute)
+app.use('/event', eventRoute)
+app.use('/user', userRoute)
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {

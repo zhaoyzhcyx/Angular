@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 
 export class EventService {
-    uri = 'http://localhost:3000/events';
+    uri = 'http://localhost:3000/event';
 
     constructor(private http: HttpClient) {}
 
@@ -25,7 +25,7 @@ export class EventService {
             description: desc,
             img: image
         }]
-        return this.http.post(`${this.uri}/add`,newEvent)
+        return this.http.post(`${this.uri}/create`,newEvent)
     }
 
     editEvent(id) {

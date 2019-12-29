@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 
-import { MessageService } from '../services/message.service';
+import { MessageService } from '../../services/message.service';
 
 @Component ({
     selector: 'app-observable',

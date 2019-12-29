@@ -44,7 +44,7 @@ export class EventEditComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.eventService.updateEvent(params.id, eventname, organizer, startdate, enddate, location, website, image, desc).subscribe((data) => {
                 if ( data[0].result == 'ok') {
-                    this.router.navigate(['events']);
+                    this.router.navigate(['event']);
                     // document.location = "/events"
                 }
             })

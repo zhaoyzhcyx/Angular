@@ -1,0 +1,11 @@
+<div class="collapse navbar-collapse" id="navbarCollapse"
+    *ngIf="userService.currentUser.username === ''; else elseBlock">
+    <a routerLink="/signin" class="nav-item nav-link">Sign In</a>
+    <a routerLink="/signup" class="nav-item nav-link">Sign Up</a>
+</div>
+<ng-template #elseBlock>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <a routerLink="/signin" class="nav-item nav-link">{{userService.currentUser.username}}</a>
+        <a routerLink="/userset/signout" class="nav-item nav-link">Sign out</a>
+    </div>
+</ng-template>
